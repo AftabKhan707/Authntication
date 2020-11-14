@@ -4,6 +4,7 @@ const mongoose=require('mongoose');
 
 //Import routes
 const authRoute=require('./routes/auth');
+const postRoute=require('./routes/posts');
 
 //connect to db
 mongoose.connect('mongodb://localhost/logindb', 
@@ -18,12 +19,8 @@ app.use(express.json());
 
 
 //Routes Middlewares
-app.post('/pin', function(request, response){
-    console.log(request.body);      // your JSON
-     response.send(request.body);    // echo the result back
-  });
-
 app.use('/api/user',authRoute);
+app.use('/api/posts',postRoute);
 
 
 
