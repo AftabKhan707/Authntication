@@ -1,4 +1,4 @@
-# Authntication
+# Authentication
 
 node.js api  to handle Authentication using JWT in any application we want to use.
 
